@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirplanesTask", "AirplanesTask\AirplanesTask.csproj", "{D6FF698F-3B98-4A27-8243-2C4F8ADF7F6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airplanes", "Airplanes\Airplanes.csproj", "{47949EC9-C102-4B8E-B7D6-2D9A03F35158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Companies", "Companies\Companies.csproj", "{30F92B49-EDCB-4858-BED1-7E10B75F390C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D6FF698F-3B98-4A27-8243-2C4F8ADF7F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FF698F-3B98-4A27-8243-2C4F8ADF7F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FF698F-3B98-4A27-8243-2C4F8ADF7F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47949EC9-C102-4B8E-B7D6-2D9A03F35158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47949EC9-C102-4B8E-B7D6-2D9A03F35158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47949EC9-C102-4B8E-B7D6-2D9A03F35158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47949EC9-C102-4B8E-B7D6-2D9A03F35158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F92B49-EDCB-4858-BED1-7E10B75F390C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F92B49-EDCB-4858-BED1-7E10B75F390C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F92B49-EDCB-4858-BED1-7E10B75F390C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F92B49-EDCB-4858-BED1-7E10B75F390C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
