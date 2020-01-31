@@ -5,7 +5,7 @@ using Airplanes.Interfaces;
 
 namespace Airplanes.Classes
 {
-    public class PassengerPlane : Airplane
+    public class PassengerPlane : IAirplane
     {
         public int Id { get; set; }
         public int Range { get; set; }

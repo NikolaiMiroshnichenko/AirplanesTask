@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Airplanes.Interfaces
 {
-    public interface Airplane
+    public interface IAirplane
     {
         int Id { get; set; }
         int Range { get; set; }

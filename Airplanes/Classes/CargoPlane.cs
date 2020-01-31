@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Airplanes.Classes
 {
-    public class CargoPlane: Airplane
+    public class CargoPlane: IAirplane
     {
         public int Id { get; set; }
         public int Range { get; set; }
