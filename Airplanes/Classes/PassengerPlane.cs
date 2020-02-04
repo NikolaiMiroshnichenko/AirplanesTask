@@ -12,9 +12,9 @@ namespace Airplanes.Classes
         public int Carrying { get; set; }
         public int FuelConsumption { get; set; }
         public int PassengerCarrying { get; set; } 
-        public void Fly()
+        public string Fly()
         {
-            Console.WriteLine("Flying like a passenger plane");
+            return "Flying like a passenger plane";
         }
     }
 }

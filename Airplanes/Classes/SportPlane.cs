@@ -5,19 +5,19 @@ using Airplanes.Interfaces;
 
 namespace Airplanes.Classes
 {
-    public class SportPlane: IAirplane
+    public class SportPlane: IAirplane, ISportPlane
     {
         public int Id { get; set; }
         public int Range { get; set; }
         public int Carrying { get; set; }
         public int FuelConsumption { get; set; }
-        public void Fly()
+        public string  Fly()
         {
-            Console.WriteLine("Flying like a sport plane");
+            return "Flying like a sport plane";
         }
-        public void MakeAStunt()
+        public string MakeAStunt()
         {
-            Console.WriteLine("Making unbelieveble stunt");
+            return "Making unbelieveble stunt";
         }
     }
 }

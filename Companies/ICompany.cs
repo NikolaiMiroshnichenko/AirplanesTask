@@ -7,15 +7,24 @@ namespace Companies
 {
     public interface ICompany
     {
-        void RegisterPlainToCompany(IAirplane airplane);
-        void UnregisterPlane(int id);
+        void RegisterPlain(IAirplane airplane);
+
+        string UnregisterPlane(int id);
+
         IAirplane ProvidePlane(int id);
-        List<IAirplane> GetListOfAirplanes();
-        List<IAirplane> OrderByCarrying();
-        List<IAirplane> OrderByRange();
+
+        List<IAirplane> GetListOfAirplanes { get; }
+
+        List<IAirplane> OrderByCarryingWeight();
+
+        List<IAirplane> OrderByFlyingDistance();
+
         List<IAirplane> OrderByFuelConsumption();
-        List<IAirplane> FiltrationByRange(int r1, int r2);
-        List<IAirplane> FiltrationByCarrying(int c1, int c2);
-        List<IAirplane> FiltrationByFuelConsumption(int fc1, int fc2);
+
+        List<IAirplane> FiltrationByFlyingDistance(int distanceMin, int distanceMax);
+
+        List<IAirplane> FiltrationByCarryingWeight(int crryingWeightMin, int caryingWeightMax);
+
+        List<IAirplane> FiltrationByFuelConsumption(int fuelConsumptionMin, int fuelConsumptionMax);
     }
 }

@@ -10,6 +10,6 @@ namespace Airplanes.Interfaces
         int Range { get; set; }
         int Carrying { get; set; }
         int FuelConsumption { get; set; }
-        void Fly();
+        string Fly();
     }
 }

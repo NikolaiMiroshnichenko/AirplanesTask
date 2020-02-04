@@ -10,93 +10,85 @@ namespace Companies
     public class Company : ICompany
     {
         private List<IAirplane> _planes = new List<IAirplane>();
-        public void RegisterPlainToCompany(IAirplane airplane)
+
+        public void RegisterPlain(IAirplane airplane)
         {
             _planes.Add(airplane);
         }
-        public void UnregisterPlane(int id)
+
+        public string UnregisterPlane(int id)
         {
             var entity = _planes.FirstOrDefault(item => item.Id == id);
-            if (entity == null) { Console.WriteLine("Plane with input id doesnt exist"); }
+            if (entity == null)
+            {
+                return "There is no plain with this Id!";
+            }
+            else
+            {
+                _planes.Remove(entity);
+                return "Plain successfully unregistred";
+            }
         }
         public IAirplane ProvidePlane(int id)
         {
             var entity = _planes.FirstOrDefault(item => item.Id == id);
-            if (entity == null) { Console.WriteLine("Plane with input id doesnt exist"); }
             return entity;
         }
 
-        public List<IAirplane> GetListOfAirplanes()
-        {
-            return _planes;
-        }
-        public List<IAirplane> OrderByCarrying()
+        public List<IAirplane> GetListOfAirplanes { get { return _planes; } }
+
+        public List<IAirplane> OrderByCarryingWeight()
         {
             return _planes.OrderBy(o => o.Carrying).ToList();
         }
-        public List<IAirplane> OrderByRange()
+
+        public List<IAirplane> OrderByFlyingDistance()
         {
             return _planes.OrderBy(o => o.Range).ToList();
         }
+
         public List<IAirplane> OrderByFuelConsumption()
         {
             return _planes.OrderBy(o => o.FuelConsumption).ToList();
         }
-        public List<IAirplane> FiltrationByRange(int r1, int r2)
+
+        public List<IAirplane> FiltrationByFlyingDistance(int flyingDistance1, int flyingDistance2)
         {
             List<IAirplane> list = new List<IAirplane>();
             foreach (var item in _planes)
             {
-                if (item == null)
+                if ((item.Range >= flyingDistance1) && (item.Range <= flyingDistance2))
                 {
-                    Console.WriteLine("There is not planes!");
-                }
-                else
-                {
-                    if ((item.Range >= r1) && (item.Range <= r2))
-                    {
-                        list.Add(item);
-                    }
+                    list.Add(item);
                 }
             }
             return list;
         }
-        public List<IAirplane> FiltrationByCarrying(int c1, int c2)
+
+        public List<IAirplane> FiltrationByCarryingWeight(int carryingWeight1, int carryingWeight2)
         {
             List<IAirplane> list = new List<IAirplane>();
             foreach (var item in _planes)
             {
-                if (item == null)
+                if ((item.Carrying >= carryingWeight1) && (item.Carrying <= carryingWeight2))
                 {
-                    Console.WriteLine("There is not planes!");
-                }
-                else
-                {
-                    if ((item.Carrying >= c1) && (item.Carrying <= c2))
-                    {
-                        list.Add(item);
-                    }
+                    list.Add(item);
                 }
             }
             return list;
         }
-        public List<IAirplane> FiltrationByFuelConsumption(int fc1, int fc2)
+
+        public List<IAirplane> FiltrationByFuelConsumption(int fuelConsumption1, int fuelConsumption2)
         {
             List<IAirplane> list = new List<IAirplane>();
             foreach (var item in _planes)
             {
-                if (item == null)
+                if ((item.FuelConsumption >= fuelConsumption1) && (item.FuelConsumption <= fuelConsumption2))
                 {
-                    Console.WriteLine("There is not planes!");
-                }
-                else
-                {
-                    if ((item.FuelConsumption >= fc1) && (item.FuelConsumption <= fc2))
-                    {
-                        list.Add(item);
-                    }
+                    list.Add(item);
                 }
             }
+
             return list;
         }
     }

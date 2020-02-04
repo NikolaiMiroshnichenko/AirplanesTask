@@ -11,9 +11,9 @@ namespace Airplanes.Classes
         public int Range { get; set; }
         public int Carrying { get; set; }
         public int FuelConsumption { get; set; }
-        public void Fly()
+        public string Fly()
         {
-            Console.WriteLine("Flying like a cargo plane");
+            return "Flying like a cargo plane";
         }
     }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Airplanes.Interfaces
 {
-    interface ISportPlane
+    public interface ISportPlane
     {
-        void MakeAStunt();
+        string MakeAStunt();
     }
 }

@@ -24,13 +24,14 @@ namespace AirplanesTask
             IAirplane plane3 = new PassengerPlane { Id = 3, Carrying = 70, FuelConsumption = 20, Range = 50 };
             IAirplane plane4 = new SportPlane { Id = 4, Carrying = 20, FuelConsumption = 10, Range = 20 };
             Company company = new Company();
-            company.RegisterPlainToCompany(plane1);
-            company.RegisterPlainToCompany(plane2);
-            company.RegisterPlainToCompany(plane3);
-            company.RegisterPlainToCompany(plane4);
-
-            company.UnregisterPlane(5);
-            var list1 = company.OrderByRange();
+            company.RegisterPlain(plane1);
+            company.RegisterPlain(plane2);
+            company.RegisterPlain(plane3);
+            company.RegisterPlain(plane4);
+            Console.WriteLine(plane2.Fly());
+            
+            Console.WriteLine(company.UnregisterPlane(5));
+            var list1 = company.OrderByFlyingDistance();
             foreach (var t in list1)
             {
                 Console.WriteLine("Plane with Id " + t.Id);
