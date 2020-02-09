@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Airplanes.Interfaces;
+﻿using Airplanes.Interfaces;
 
 namespace Airplanes.Classes
 {
