@@ -1,5 +1,4 @@
-﻿
-namespace Airplanes.Interfaces
+﻿namespace Airplanes.Interfaces
 {
     public interface IAirplane
     {
